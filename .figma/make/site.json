@@ -1,0 +1,10 @@
+{
+  "description": "A streamlined application form for aspiring café owners to share their business details and apply for café opportunities.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
