@@ -164,7 +164,20 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
                   <div className="grid gap-7 sm:grid-cols-2">
                     <label className="field-label">
                       Full name
-                      <input required name="name" autoComplete="name" placeholder="Your name" className="field-input" />
+                      <input
+                    required
+                    name="name"
+                    autoComplete="name"
+                    minLength={2}
+                    maxLength={100}
+                    pattern="[\p{L}\s.'’\-]+"
+                    title="Letters only. Numbers are not allowed."
+                    placeholder="Your name"
+                    onInput={(event) => {
+                      event.currentTarget.value = event.currentTarget.value.replace(/[^\p{L}\s.'’-]/gu, '')
+                    }}
+                    className="field-input"
+                  />
                     </label>
                     <label className="field-label">
                       Email address
