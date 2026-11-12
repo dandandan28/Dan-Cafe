@@ -5,7 +5,7 @@ const positions = ['Barista', 'Kitchen', 'Supervisor', 'Manager','Cashier']
 
 function LeafMark() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 36 36" className="h-9 w-9 fill-none">
+    <svg aria-hidden="true" viewBox="0 0 36 36" className="h-11 w-11 fill-none">
       <path
         d="M28.5 7.5c-10.9.4-17.1 5-18.3 13.8 5.5.6 10-1 13.3-4.6"
         stroke="currentColor"
@@ -105,7 +105,7 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
           <div className="relative flex h-full min-h-[440px] flex-col justify-between p-7 sm:p-10 lg:p-12">
             <a href="#" className="flex w-fit items-center gap-2.5 text-white" aria-label="DAN CAFE home">
               <LeafMark />
-              <span className="font-serif text-[27px] tracking-tight">DAN CAFE</span>
+              <span className="font-serif text-[34px] tracking-tight">DAN CAFE</span>
             </a>
 
             <div className="max-w-[520px] pt-20">
