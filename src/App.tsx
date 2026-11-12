@@ -69,7 +69,7 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
   setErrorMessage('')
 
   const { error: insertError } = await supabase.from('applicants').insert({
-    full_name: String(data.get('name') ?? ''),
+    full_name: String(data.get('name') ?? '').trim(),
     email: String(data.get('email') ?? '').trim(),
     phone,
     position: String(data.get('position') ?? ''),
