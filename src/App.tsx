@@ -170,12 +170,9 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
                     autoComplete="name"
                     minLength={2}
                     maxLength={100}
-                    pattern="[\p{L}\s.'’\-1-9]+"
-                    title="Letters only. Numbers are not allowed."
+                    pattern="^[\p{L}\s.'’\-]+$"
+                    title="Please enter a valid name without numbers."
                     placeholder="Your name"
-                    onInput={(event) => {
-                      event.currentTarget.value = event.currentTarget.value.replace(/[^\p{L}\s.'’\-1-9]/gu, '')
-                    }}
                     className="field-input"
                   />
                     </label>
