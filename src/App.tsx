@@ -165,16 +165,24 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
                     <label className="field-label">
                       Full name
                       <input
-                    required
-                    name="name"
-                    autoComplete="name"
-                    minLength={2}
-                    maxLength={100}
-                    pattern="^[\p{L}\s.'’\-]+$"
-                    title="Please enter a valid name without numbers."
-                    placeholder="Your name"
-                    className="field-input"
-                  />
+                  required
+                  name="name"
+                  autoComplete="name"
+                  minLength={2}
+                  maxLength={100}
+                  pattern="[A-Za-zÀ-ÿ\s.'’\-]+"
+                  placeholder="Your name"
+                  onInvalid={(event) => {
+                    const input = event.currentTarget
+                    if (input.validity.patternMismatch) {
+                      input.setCustomValidity('Invalid name: numbers and special symbols are not allowed.')
+                    }
+                  }}
+                  onInput={(event) => {
+                    event.currentTarget.setCustomValidity('')
+                  }}
+                  className="field-input"
+                />
                     </label>
                     <label className="field-label">
                       Email address
