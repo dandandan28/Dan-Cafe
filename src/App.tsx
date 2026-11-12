@@ -5,7 +5,7 @@ const positions = ['Barista', 'Kitchen', 'Supervisor', 'Manager','Cashier']
 
 function LeafMark() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 36 36" className="h-11 w-11 fill-none">
+    <svg aria-hidden="true" viewBox="0 0 36 36" className="h-13 w-13 fill-none">
       <path
         d="M28.5 7.5c-10.9.4-17.1 5-18.3 13.8 5.5.6 10-1 13.3-4.6"
         stroke="currentColor"
