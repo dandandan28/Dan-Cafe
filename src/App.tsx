@@ -187,7 +187,7 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
                     </label>
                     <label className="field-label">
                       Email address
-                      <input required type="email" name="email" autoComplete="email" placeholder="you@email.com" className="field-input" />
+                      <input required type="email" name="email" autoComplete="email" placeholder="dancafe@gmail.com" className="field-input" />
                     </label>
                   </div>
 
@@ -236,7 +236,7 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
                   <fieldset>
                     <legend className="field-label mb-3">Availability</legend>
                     <div className="flex flex-wrap gap-2.5">
-                      {['Weekdays', 'Weekends', 'Mornings', 'Evenings'].map((time) => (
+                      {['Weekdays', 'Weekends'].map((time) => (
                         <label key={time} className="choice-pill">
                           <input type="checkbox" name="availability" value={time} className="peer sr-only" />
                           <span className="block rounded-full border border-[#cbc7bd] px-4 py-2.5 text-sm font-medium text-[#68736b] transition peer-checked:border-[#365744] peer-checked:bg-[#365744] peer-checked:text-white hover:border-[#748479]">
@@ -253,7 +253,7 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
                       required
                       name="message"
                       rows={4}
-                      placeholder="Share a little about yourself and what draws you to café work..."
+                      placeholder="Share a little about yourself and what draws you to cafe work..."
                       className="field-input resize-y leading-6"
                     />
                   </label>
