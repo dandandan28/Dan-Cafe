@@ -111,12 +111,12 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
             <div className="max-w-[520px] pt-20">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-[#e9cda4]">We&apos;re hiring</p>
               <h1 className="font-serif text-[42px] leading-[1.02] tracking-[-0.035em] sm:text-[56px] lg:text-[64px]">
-                Good coffee.
+                Good coffee. 
                 <br />
-                Good people.
+                Better connections.
               </h1>
               <p className="mt-6 max-w-md text-[15px] leading-7 text-white/75 sm:text-base">
-                We&apos;re building a thoughtful neighborhood cafe where craft, care, and community come first.
+                “A cozy neighborhood cafe where great coffee, warm moments, and genuine connections come together.”
               </p>
               <div className="mt-8 flex items-center gap-3 text-xs uppercase tracking-[0.16em] text-white/65">
                 <span className="h-px w-9 bg-[#e9cda4]" />
@@ -171,6 +171,7 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>) {
                   minLength={2}
                   maxLength={100}
                   pattern="[A-Za-zÀ-ÿ\s.'’\-]+"
+                  title="Please enter a valid name (letters and spaces only)."
                   placeholder="Your name"
                   onInvalid={(event) => {
                     const input = event.currentTarget
